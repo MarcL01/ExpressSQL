@@ -1,6 +1,6 @@
 # 📚 ExpressSQL | Basic guide
 
-Very basic ExpressJS project showing the relationship between client and server. The client uses JQuery to get and post data view AJAX requests.
+Very basic ExpressJS project showing the relationship between client and server. The client uses JQuery to get and post data with AJAX requests.
 
 ## 💻 Install
 **Note**: Make sure your MySQL and Node installed.
