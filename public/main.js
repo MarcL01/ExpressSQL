@@ -1,7 +1,8 @@
 
+// The function that will be used to load data from our server
 let loadResultsFromDatabase = () => {
     console.log("Loading data from server...");
-    $.ajax({
+    $.ajax({ // retrieve data from the server
         url: "http://127.0.0.1:3000/database",
         type: "GET",
         success: (results) => {
@@ -9,11 +10,11 @@ let loadResultsFromDatabase = () => {
             var dataDiv = $('#mysql-data');
             dataDiv.empty(); // remove all current elements in div
             for (row of results) {
-                dataDiv.prepend(`<p>${row.text}</p>`);
+                dataDiv.prepend(`<p>${row.text}</p>`); // add each row into our div
             }
         },
         error: (error) => {
-            console.log(error);
+            console.log(error); // hopefully this doesn't happen (:
         }
     });
 }
@@ -32,9 +33,10 @@ $("form#addData").submit((event) => {
             loadResultsFromDatabase(); // reload the displayed data
         },
         error: (error) => {
-            console.log(error);
+            console.log(error); // hopefully this doesn't happen (:
         }
     })
 });
 
+// Initially load data from the database
 loadResultsFromDatabase();
