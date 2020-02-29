@@ -5,6 +5,7 @@ Very basic ExpressJS project showing the relationship between client and server.
 ## 💻 Install
 **Note**: Make sure your MySQL and Node installed.
 
+**Side Note** Before starting update the ```server/db.js``` to match your MySQL credentials.
 
 In the command terminal, run the following commands:
 
@@ -14,7 +15,6 @@ In the command terminal, run the following commands:
     $ mysql -u root -p < server/schema.sql
     $ npm start
 After running ```npm start``` navigate to http://127.0.0.1:3000/
-
 
 ## ❌ Troubleshooting Errors:
 * ```OperationalError: connect ECONNREFUSED 127.0.0.1:3306```
